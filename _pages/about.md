@@ -6,4 +6,4 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Hi, I'm Keguang Cheng. I come from CHina.
+Hi, I'm Keguang Cheng. I come from China.
