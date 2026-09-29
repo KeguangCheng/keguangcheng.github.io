@@ -10,6 +10,12 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  // Apply the saved preference before styles paint; first visits start in dark mode.
+  var initialTheme = 'dark';
+  try {
+    if (localStorage.getItem('theme') === 'light') initialTheme = 'light';
+  } catch (error) { /* Keep the default when browser storage is unavailable. */ }
+  document.documentElement.setAttribute('data-theme', initialTheme);
 </script>
 
 <!-- For all browsers -->

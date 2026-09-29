@@ -1,0 +1,15 @@
+{% if include.compact %}
+<ul class="manuscript-list-compact">
+{% for manuscript in site.data.manuscripts %}<li><strong>{{ manuscript.title | escape }}</strong> — {{ manuscript.role }}; {{ manuscript.type | downcase }}; {{ manuscript.status | downcase }}{% if manuscript.working_title %}; working title{% endif %}.</li>{% endfor %}
+</ul>
+{% else %}
+{% for manuscript in site.data.manuscripts %}
+<article class="publication-entry">
+  <p class="entry-meta">{{ manuscript.role }} · {{ manuscript.type }}{% if manuscript.working_title %} · Working title{% endif %}</p>
+  <h3>{{ manuscript.title | escape }}</h3>
+  <p class="manuscript-status">{{ manuscript.status | escape }}</p>
+  <p>{{ manuscript.description | escape }}</p>
+  {% if manuscript.project_url %}<p><a href="{{ manuscript.project_url | relative_url }}">Related research experience &rarr;</a></p>{% endif %}
+</article>
+{% endfor %}
+{% endif %}

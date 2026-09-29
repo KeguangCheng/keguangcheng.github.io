@@ -1,0 +1,192 @@
+/* Small additions to the existing Academic Pages theme. */
+.research-kicker { color: var(--global-link-color); font-size: .82em; font-weight: 600; letter-spacing: .035em; }
+.profile-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin: 1.5rem 0 2rem; }
+.profile-actions .btn { margin: 0; }
+.profile-actions .contact-link { font-size: .85em; margin-left: .25rem; }
+.entry-meta { color: var(--global-text-color-light); font-size: .8em; margin-bottom: .5rem; }
+.section-index { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; padding: 1rem 0; border-block: 1px solid var(--global-border-color); font-size: .85em; }
+.publication-entry { padding: 1.25rem 0; border-bottom: 1px solid var(--global-border-color); }
+.publication-entry:first-child { padding-top: .5rem; }
+.publication-entry h3 { font-size: 1.08em; margin: .3rem 0 .6rem; line-height: 1.45; }
+.publication-authors { font-size: .87em; line-height: 1.65; }
+.publication-links { font-size: .8em; margin-bottom: 0 !important; overflow-wrap: anywhere; }
+.page__content h2 { scroll-margin-top: 5rem; }
+.personal-photo { max-width: 520px; }
+.personal-photo img { width: 100%; height: auto; border-radius: 6px; }
+.personal-photo figcaption { text-align: left; }
+.cv-contact { font-size: .9em; }
+@media (max-width: 600px) {
+  .profile-actions { align-items: flex-start; }
+  .profile-actions .contact-link { flex-basis: 100%; margin-top: .4rem; margin-left: 0; }
+  .page__title { overflow-wrap: anywhere; }
+}
+@media print {
+  .masthead, .sidebar, .page__footer, .cv-actions, .page__meta, .page__share { display: none !important; }
+  html { font-size: 11pt !important; }
+  body, #main, .page, .page__inner-wrap { width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; float: none !important; }
+  body { color: #111 !important; background: #fff !important; }
+  .page__content a { color: #111 !important; text-decoration: none; }
+  .page__content h2, .page__content h3 { break-after: avoid; }
+  .publication-entry { break-inside: avoid; }
+  @page { margin: 18mm; }
+}
+
+/* Pure black and white surfaces, with muted text and readable link colors. */
+html { color-scheme: light; }
+html:not([data-theme="dark"]) {
+  --global-base-color: #24788e;
+  --global-bg-color: #fff;
+  --global-footer-bg-color: #fff;
+  --global-border-color: #dedede;
+  --global-dark-border-color: #b5b5b5;
+  --global-text-color: #171717;
+  --global-text-color-light: #606060;
+  --global-masthead-link-color: #171717;
+  --global-masthead-link-color-hover: #24788e;
+  --global-link-color: #24788e;
+  --global-link-color-hover: #175669;
+  --global-link-color-visited: #24788e;
+  --global-thead-color: #fff;
+  --global-fig-caption-color: #606060;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --global-bg-color: #000;
+  --global-footer-bg-color: #000;
+  --global-border-color: #343434;
+  --global-dark-border-color: #636363;
+  --global-text-color: #f5f5f5;
+  --global-text-color-light: #b7b7b7;
+  --global-masthead-link-color: #f5f5f5;
+  --global-masthead-link-color-hover: #86d8e9;
+  --global-link-color: #86d8e9;
+  --global-link-color-hover: #c5f2fa;
+  --global-link-color-visited: #86d8e9;
+  --global-thead-color: #000;
+  --global-fig-caption-color: #b7b7b7;
+  --global-code-background-color: #000;
+  --global-code-text-color: #f5f5f5;
+}
+.btn--inverse { color: var(--global-text-color) !important; background: var(--global-bg-color); border: 1px solid var(--global-border-color); }
+.btn--inverse:hover { color: var(--global-bg-color) !important; background: var(--global-text-color); }
+#theme-toggle a:focus-visible { outline: 2px solid var(--global-link-color); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  #main, .page, .archive, .sidebar { animation: none !important; }
+}
+
+.interest-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.8rem; margin: 2.2rem 0; }
+.interest-entry { scroll-margin-top: 5rem; display: flex; flex-direction: column; padding: 1.2rem 0 0; border-top: 2px solid var(--global-border-color); }
+.interest-entry h3 { margin: 0 0 1.1rem; line-height: 1.35; font-size: 1.08em; }
+.interest-entry p { font-size: .88em; line-height: 1.65; }
+.interest-entry .interest-project-link { margin-top: auto; padding-top: .5rem; font-size: .84em; }
+@media (min-width: 701px) { .interest-entry h3 { min-height: 2.7em; } }
+@media (min-width: 925px) { .interests-page .page { padding-right: 0; } }
+@media (max-width: 700px) { .interest-list { grid-template-columns: 1fr; gap: 1.3rem; } }
+.course-entry { border-bottom: 1px solid var(--global-border-color); }
+.course-entry summary { padding: 1rem .25rem; cursor: pointer; }
+.course-entry summary:hover, .course-entry summary:focus-visible { color: var(--global-link-color); }
+.course-name { font-weight: 600; }
+.course-term { display: block; margin: .35rem 0 0 1.1rem; color: var(--global-text-color-light); font-size: .78em; }
+.course-description { padding: .15rem 1.1rem .6rem; }
+.course-description p { font-size: .92em; }
+.course-description .entry-meta { font-size: .78em; }
+.skills-evidence dt { font-weight: 600; margin-top: 1.3rem; }
+.skills-evidence dd { margin: .45rem 0 0; }
+.transcript-list section { padding: .75rem 0 1.3rem; border-bottom: 1px solid var(--global-border-color); }
+.document-actions { display: flex; flex-wrap: wrap; gap: .7rem 1.5rem; }
+.fieldwork-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.2rem 0 2rem; }
+.fieldwork-gallery figure { display: block; margin: 0; }
+.fieldwork-gallery a { width: 100%; display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 3; }
+.fieldwork-gallery img { margin-bottom: 0; display: block; width: 100%; height: 100%; object-fit: contain; border-radius: 4px; }
+.fieldwork-gallery--single { display: block; max-width: 560px; }
+.fieldwork-gallery--single a { aspect-ratio: auto; }
+.fieldwork-gallery--single img { height: auto; }
+.fieldwork-gallery figcaption { margin-top: .55rem; text-align: left; }
+@media (max-width: 600px) { .fieldwork-gallery { grid-template-columns: 1fr; } }
+
+.course-description ul { font-size: .92em; padding-left: 1.2rem; }
+.course-description h4 { font-size: .92em; margin: 1.15rem 0 .4rem; }
+.course-table-wrap { width: 100%; margin: 1.2rem 0 2rem; }
+.undergraduate-table { display: table; table-layout: fixed; width: 100%; margin: 0; font-size: .82em; border-collapse: collapse; }
+.undergraduate-table caption { caption-side: top; text-align: left; color: var(--global-text-color); font-weight: 700; padding: .65rem 0; }
+.undergraduate-table .course-column { width: 38%; }
+.undergraduate-table .grade-column { width: 12%; }
+.undergraduate-table th, .undergraduate-table td { padding: .65rem .6rem; border-bottom: 1px solid var(--global-border-color); vertical-align: middle; }
+.undergraduate-table th { background: var(--global-bg-color); }
+.undergraduate-table .course-grade { font-variant-numeric: tabular-nums; }
+.undergraduate-table .grade-short { display: none; }
+.undergraduate-table th:nth-child(even), .undergraduate-table .course-grade { text-align: center; }
+.undergraduate-table td:nth-child(3), .undergraduate-table th:nth-child(3) { border-left: 2px solid var(--global-border-color); }
+@media (max-width: 600px) {
+  .undergraduate-table { font-size: .8rem; }
+  .undergraduate-table .course-column { width: 36%; }
+  .undergraduate-table .grade-column { width: 14%; }
+  .undergraduate-table .grade-label { display: none; }
+  .undergraduate-table .grade-short { display: inline; }
+  .undergraduate-table th, .undergraduate-table td { padding: .6rem .25rem; }
+}
+@media print {
+  html, html[data-theme="dark"] {
+    color-scheme: light;
+    --global-bg-color: #fff;
+    --global-text-color: #111;
+    --global-text-color-light: #444;
+    --global-border-color: #ccc;
+    --global-thead-color: #fff;
+    --global-fig-caption-color: #444;
+  }
+  .page__title, .page__content, .page__content h2, .page__content h3 { color: #111 !important; }
+}
+
+/* Photographs connect the research themes to observations outside the lab. */
+.interest-photo { display: block; margin: 0 0 1.25rem; }
+.interest-image-link { display: block; position: relative; width: 100%; margin: 0; padding: 0; border: 0; border-radius: 3px; background: transparent; cursor: zoom-in; }
+.interest-image-link:focus-visible, .photo-dialog-close:focus-visible { outline: 2px solid var(--global-link-color); outline-offset: 4px; }
+.interest-photo img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 3px; }
+.photo-enlarge { position: absolute; right: .5rem; bottom: .5rem; width: 1.6rem; height: 1.6rem; display: grid; place-items: center; background: rgba(0,0,0,.72); color: #fff; border-radius: 50%; font-size: 1.1rem; line-height: 1; }
+.page__content .interest-photo-hint { color: var(--global-text-color-light); font-size: .78em; margin-top: -.3rem; }
+html.photo-modal-open { overflow: hidden; }
+.interest-dialog { box-sizing: border-box; width: min(1120px, calc(100% - 2rem)); max-width: none; max-height: 90vh; max-height: 90dvh; margin: auto; padding: 0 1.5rem 1.5rem; border: 1px solid var(--global-border-color); border-radius: 8px; color: var(--global-text-color); background: var(--global-bg-color); overflow: auto; overscroll-behavior: contain; }
+.interest-dialog::backdrop { background: rgba(0,0,0,.8); backdrop-filter: blur(4px); }
+.photo-dialog-toolbar { position: sticky; top: 0; z-index: 1; display: flex; justify-content: flex-end; padding: .65rem 0; background: var(--global-bg-color); }
+.photo-dialog-close { padding: .4rem .6rem; border: 1px solid var(--global-border-color); border-radius: 4px; background: var(--global-bg-color); color: var(--global-text-color); cursor: pointer; font: inherit; font-size: .78rem; }
+.photo-dialog-close span { font-size: 1.15em; margin-left: .5rem; }
+.photo-dialog-content { display: grid; grid-template-columns: 1.15fr 1fr; gap: 1.6rem; align-items: start; }
+.photo-dialog-image { display: block; width: 100%; height: auto; max-height: 72vh; object-fit: contain; border-radius: 3px; }
+.photo-dialog-story h2 { margin: 0 0 .75rem; padding: 0; border: 0; font-size: 1.3rem; line-height: 1.3; }
+.photo-dialog-story p { margin: 0 0 1rem; font-size: .88rem; line-height: 1.65; }
+.photo-dialog-story .photo-location { color: var(--global-text-color-light); font-size: .8rem; }
+@media (max-width: 760px) {
+  .interest-dialog { width: calc(100% - 1rem); max-height: 94vh; max-height: 94dvh; padding: 0 1rem 1rem; }
+  .photo-dialog-content { grid-template-columns: 1fr; gap: 1.25rem; }
+  .photo-dialog-image { max-height: 55vh; }
+}
+.about-intro { display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.8rem; align-items: center; margin: 1.5rem 0 2rem; }
+.about-intro figure { margin: 0; }
+.about-intro img { display: block; width: 100%; height: auto; border-radius: 3px; }
+.about-intro figcaption { text-align: left; }
+@media (max-width: 700px) {
+  .about-intro { grid-template-columns: 1fr; gap: .8rem; }
+  .about-intro figure { max-width: 400px; }
+}
+
+.unbroken-name { white-space: nowrap; }
+
+/* Preserve the full portrait, including Chuyi on the shoulder. */
+.author__avatar img { display: block; width: 100%; height: auto; border-radius: 6px; }
+@media (max-width: 1023px) { div.author__avatar { width: 76px; } }
+
+.home-interest-list { padding-left: 1.1rem; }
+.home-interest-list li { margin-bottom: .45rem; }
+.chuyi-gallery { display: grid; grid-template-columns: 1fr 1.25fr; gap: 1.5rem; align-items: start; margin: 1.5rem 0; }
+.chuyi-gallery .personal-photo { display: block; margin: 0; max-width: none; }
+.chuyi-gallery .personal-photo > a, .egg-animation-frame { width: 100%; display: flex; align-items: center; justify-content: center; height: 340px; }
+.chuyi-gallery .personal-photo img { margin-bottom: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
+@media (max-width: 600px) {
+  .chuyi-gallery { grid-template-columns: 1fr; gap: 1.5rem; }
+  .chuyi-gallery .personal-photo > a { height: auto; }
+  .chuyi-gallery .personal-photo > a img { height: auto; }
+  .egg-animation-frame { height: 420px; }
+}
+
+.chuyi-gallery figcaption { margin-top: .55rem; }

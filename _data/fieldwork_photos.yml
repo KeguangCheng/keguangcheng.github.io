@@ -1,0 +1,52 @@
+# Photo paths, accessible descriptions (alt), and visible captions.
+# Originals are in photo/; website copies are in images/fieldwork/.
+ecology:
+  - src: "/images/fieldwork/ecology-forest-quadrat.jpeg"
+    alt: "Survey cords marking a quadrat on a wooded slope"
+    caption: "A forest quadrat for documenting plant communities."
+    width: 4032
+    height: 3024
+  - src: "/images/fieldwork/ecology-insect-light-trap.jpeg"
+    alt: "An illuminated insect trap at night during fieldwork"
+    caption: "Light-trapping insects during the comprehensive field internship."
+    width: 4032
+    height: 3024
+jiufeng:
+  - src: "/images/fieldwork/jiufeng-survey-route.jpeg"
+    alt: "A field team walking along a grassy mountain ridge at Jiufeng"
+    caption: "Along the field survey route at Jiufeng."
+    width: 4032
+    height: 3024
+  - src: "/images/fieldwork/jiufeng-plant-observation.jpg"
+    alt: "Two participants examining a plant beside forest steps"
+    caption: "Examining plants in the field at Jiufeng."
+    width: 2736
+    height: 3648
+zoology:
+  - src: "/images/fieldwork/zoology-field-team.jpg"
+    alt: "Five classmates on a field excursion, with Keguang Cheng on the far left"
+    caption: "Zoology fieldwork with classmates; I am on the far left."
+    width: 5184
+    height: 3888
+  - src: "/images/fieldwork/zoology-insect-specimens.jpeg"
+    alt: "Pinned insect specimens arranged in a labeled collection box"
+    caption: "Insect specimens identified and prepared during the zoology internship."
+    width: 4031
+    height: 3023
+botany:
+  - src: "/images/fieldwork/botany-herbarium-specimens.jpg"
+    alt: "Two mounted plant specimens with identification labels"
+    caption: "Mounted herbarium specimens from the botany internship."
+    width: 1920
+    height: 1080
+  - src: "/images/fieldwork/botany-specimen-preparation.jpeg"
+    alt: "Plant specimens arranged on a long outdoor table after dark"
+    caption: "Preparing and arranging plant specimens after fieldwork."
+    width: 2951
+    height: 3035
+laboratory:
+  - src: "/images/fieldwork/molecular-biology-practical-group.jpg"
+    alt: "A molecular biology practical group wearing lab coats and holding pipettes"
+    caption: "Molecular biology practical group; I am second from the right in our group."
+    width: 1680
+    height: 1120

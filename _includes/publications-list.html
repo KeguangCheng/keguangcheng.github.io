@@ -1,0 +1,10 @@
+<div class="publication-list">
+{% for publication in site.data.publications %}
+  <article class="publication-entry">
+    <p class="entry-meta">{{ publication.year }} · {{ publication.venue }}</p>
+    <h3><a href="https://doi.org/{{ publication.doi }}">{{ publication.title }}</a></h3>
+    <p class="publication-authors">{{ publication.authors }}</p>
+    <p class="publication-links"><a href="https://doi.org/{{ publication.doi }}">DOI: {{ publication.doi }}</a></p>
+  </article>
+{% endfor %}
+</div>

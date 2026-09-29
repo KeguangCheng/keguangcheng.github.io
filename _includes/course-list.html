@@ -1,0 +1,13 @@
+<div class="course-list">
+{% for course in include.courses %}
+  <details class="course-entry" id="{{ course.slug }}">
+    <summary><span class="course-name">{{ course.title }}</span><span class="course-term">{{ course.term }}{% if course.grade %} · Grade: {{ course.grade }}{% endif %}{% if course.status == 'In progress' %} · In progress{% endif %}</span></summary>
+    <div class="course-description">
+      <p class="entry-meta">{{ course.code }} · {{ course.status }}</p>
+      <p>{{ course.description }}</p>
+      {% if course.project_url %}<p><a href="{{ course.project_url | relative_url }}">{{ course.project_label }} &rarr;</a></p>{% endif %}
+      {% if course.work.size > 0 %}<h4>Selected work</h4><ul>{% for item in course.work %}<li><a href="{{ item.url | relative_url }}"{% if item.download %} download{% endif %}>{{ item.title }}</a>{% if item.note %} — {{ item.note }}{% endif %}</li>{% endfor %}</ul>{% endif %}
+    </div>
+  </details>
+{% endfor %}
+</div>

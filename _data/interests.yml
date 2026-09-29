@@ -1,0 +1,59 @@
+# Research interests and photo stories. photo_sources are retained for editorial reference and are not displayed.
+- slug: "evolution-ecology"
+  title: "Evolutionary Biology & Ecology"
+  description: "I am interested in phylogenetic systematics, evolutionary genomics, and how interactions between organisms and their environments shape adaptation."
+  link: "/research/#nlr-evolution"
+  label: "NLR evolution research"
+  photo: "/images/interests/acer-negundo-beijing.jpg"
+  photo_alt: "Long, dangling stamens of Acer negundo beneath fresh green leaves"
+  photo_label: "<em>Acer negundo</em>"
+  photo_note: "photo-evolution"
+  photo_width: 2615
+  photo_height: 2610
+  photo_location: "I took this photo at Beijing Botanical Garden in Beijing, China."
+  photo_description:
+    - "The male flowers have long, slender, pendulous filaments that expose their anthers to air currents. This floral architecture is associated with wind pollination and helps pollen disperse into the air."
+    - "I chose this photograph to represent my interest in adaptive evolution: how natural selection shapes functional traits, and how their effectiveness depends on the surrounding environment."
+  photo_sources:
+    - label: "Floral morphology and wind pollination"
+      url: "https://academic.oup.com/botlinnean/article/204/3/267/7280861"
+- slug: "conservation-biodiversity"
+  title: "Conservation Genetics & Biodiversity"
+  description: "I am interested in using genetic diversity, population structure, evolutionary history, and biogeography to understand biodiversity and inform conservation."
+  link: "/research/#conservation-genomics"
+  label: "Conservation genomics research"
+  photo: "/images/interests/zamia-montgomery.jpeg"
+  photo_alt: "A Zamia cycad with cones and emerging leaves at Montgomery Botanical Center"
+  photo_label: "<em>Zamia</em> sp."
+  photo_note: "photo-conservation"
+  photo_width: 1681
+  photo_height: 1600
+  photo_location: "I took this photo at Montgomery Botanical Center in Coral Gables, near Miami, Florida."
+  photo_description:
+    - "Zamia belongs to an ancient cycad lineage with a fossil history spanning hundreds of millions of years, although living Zamia species diversified much more recently. Many cycads are now threatened by habitat loss and illegal collecting."
+    - "Habitat fragmentation can leave small, isolated populations with limited gene flow, increasing their vulnerability to genetic drift and inbreeding. I chose this photograph because it connects my interests in biogeography and population genetics with the need to conserve both plant diversity and genetic connectivity."
+  photo_sources:
+    - label: "Zamia evolutionary history"
+      url: "https://doi.org/10.1093/aob/mcae065"
+    - label: "Cycad conservation"
+      url: "https://iucn.org/our-union/commissions/group/iucn-ssc-cycad-specialist-group"
+    - label: "Population fragmentation and isolation"
+      url: "https://doi.org/10.1007/s10592-023-01569-4"
+- slug: "development-ecophysiology"
+  title: "Plant Development & Ecophysiology"
+  description: "I am interested in how developmental programs shape plant organs and how plant–environment interactions influence physiological and ecological responses."
+  link: "/research/#nybg-podostemum"
+  label: "Current research at NYBG"
+  photo: "/images/interests/couroupita-penang.jpeg"
+  photo_alt: "A pink cannonball-tree flower showing its curved androecial hood and ring of stamens"
+  photo_label: "<em>Couroupita guianensis</em>"
+  photo_note: "photo-development"
+  photo_width: 2855
+  photo_height: 2883
+  photo_location: "I took this photo at Penang Botanic Gardens in Penang, Malaysia."
+  photo_description:
+    - "The flower has two distinct regions of the androecium: a staminal ring that produces fertile pollen as individual grains, and an androecial hood whose staminodes produce non-germinating pollen in tetrads—groups of four grains—collected by visiting bees as food."
+    - "This separation of pollen in both space and function drew my attention. I chose this photograph to represent my interest in how developmental specialization gives rise to distinctive plant forms and shapes their interactions with other organisms."
+  photo_sources:
+    - label: "NYBG: floral structure and pollen"
+      url: "https://sweetgum.nybg.org/science/projects/fg/taxon-details/?irn=133473"

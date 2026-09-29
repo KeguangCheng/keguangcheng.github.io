@@ -1,0 +1,9 @@
+# Local override: links stay on this computer during preview.
+url: "http://127.0.0.1:4000"
+baseurl: ""
+analytics:
+  provider: false
+
+# Keep disposable Sass caches outside iCloud to avoid stalled cache reads.
+sass:
+  cache_location: /private/tmp/keguang-website-sass-cache

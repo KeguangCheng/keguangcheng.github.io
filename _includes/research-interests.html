@@ -1,0 +1,28 @@
+<div class="interest-list">
+{% for interest in site.data.interests %}
+  <section class="interest-entry" id="{{ interest.slug }}">
+    <figure class="interest-photo">
+      <button class="interest-image-link" type="button" data-photo-dialog="{{ interest.photo_note }}" aria-haspopup="dialog" aria-controls="{{ interest.photo_note }}" aria-label="Enlarge photograph for {{ interest.title | escape }} and read its story">
+        <img src="{{ interest.photo | relative_url }}" alt="{{ interest.photo_alt | escape }}" width="{{ interest.photo_width }}" height="{{ interest.photo_height }}" decoding="async">
+        <span class="photo-enlarge" aria-hidden="true">&#x2922;</span>
+      </button>
+    </figure>
+    <h3>{{ interest.title }}</h3>
+    <p>{{ interest.description }}</p>
+    <a class="interest-project-link" href="{{ interest.link | relative_url }}">{{ interest.label }} &rarr;</a>
+  </section>
+{% endfor %}
+</div>
+{% for interest in site.data.interests %}
+<dialog class="interest-dialog" id="{{ interest.photo_note }}" aria-labelledby="{{ interest.photo_note }}-title">
+  <div class="photo-dialog-toolbar"><button type="button" class="photo-dialog-close" aria-label="Close photograph">Close <span aria-hidden="true">&times;</span></button></div>
+  <div class="photo-dialog-content">
+    <img class="photo-dialog-image" src="{{ interest.photo | relative_url }}" alt="{{ interest.photo_alt | escape }}" width="{{ interest.photo_width }}" height="{{ interest.photo_height }}" loading="lazy" decoding="async">
+    <div class="photo-dialog-story">
+      <h2 id="{{ interest.photo_note }}-title">{{ interest.photo_label }}</h2>
+      <p class="photo-location">{{ interest.photo_location }}</p>
+      {% for paragraph in interest.photo_description %}<p>{{ paragraph }}</p>{% endfor %}
+    </div>
+  </div>
+</dialog>
+{% endfor %}

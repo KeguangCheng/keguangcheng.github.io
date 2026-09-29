@@ -1,0 +1,40 @@
+---
+layout: single
+title: "Courses & Skills"
+permalink: /courses/
+author_profile: true
+---
+<p>Selected coursework and practical skills in biology, genomics, and quantitative analysis.</p>
+<nav class="section-index" aria-label="Courses and skills sections">
+  <a href="#graduate-coursework">Graduate coursework</a><a href="#undergraduate-foundations">Undergraduate foundations</a><a href="#skills-in-practice">Skills in practice</a><a href="#transcripts">Transcripts</a>
+</nav>
+<h2 id="graduate-coursework">Graduate coursework</h2>
+<p class="entry-meta">New York University · M.S. in Biology · Cumulative GPA: <strong>3.889/4.0</strong></p>
+{% include course-list.html courses=site.data.courses.graduate %}
+<h2 id="undergraduate-foundations">Undergraduate foundations</h2>
+<p class="entry-meta">Beijing Forestry University · B.S. in Biological Sciences · Overall GPA: <strong>≈ 3.75/4.0</strong></p>
+{% for group in site.data.courses.undergraduate_groups %}
+<div class="course-table-wrap">
+<table class="undergraduate-table">
+  <caption>{{ group.title }}</caption>
+  <colgroup><col class="course-column"><col class="grade-column"><col class="course-column"><col class="grade-column"></colgroup>
+  <thead><tr><th scope="col">Course</th><th scope="col" aria-label="Grade out of 100"><span class="grade-label">Grade</span><span class="grade-short" aria-hidden="true">/100</span></th><th scope="col">Course</th><th scope="col" aria-label="Grade out of 100"><span class="grade-label">Grade</span><span class="grade-short" aria-hidden="true">/100</span></th></tr></thead>
+  <tbody>
+  {% for course in group.courses %}
+    {% assign pair_position = forloop.index0 | modulo: 2 %}
+    {% if pair_position == 0 %}<tr>{% endif %}
+      <td class="course-title">{{ course.title }}</td><td class="course-grade">{{ course.grade }}</td>
+    {% if pair_position == 1 %}</tr>{% elsif forloop.last %}<td></td><td></td></tr>{% endif %}
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endfor %}
+<h2 id="skills-in-practice">Skills in practice</h2>
+{% include skills-list.html %}
+{% include fieldwork-gallery.html group="laboratory" %}
+<h2 id="transcripts">Academic transcripts</h2>
+<div class="transcript-list">
+  <section><h3>New York University</h3><p>Graduate record · issued September 9, 2026 · cumulative GPA 3.889/4.0</p><div class="document-actions"><a href="{{ '/files/transcripts/Keguang_Cheng_NYU_Transcript.pdf' | relative_url }}" target="_blank" rel="noopener">View PDF <span class="sr-only">in a new tab</span></a></div></section>
+  <section><h3>Beijing Forestry University</h3><p>Undergraduate academic record · issued June 25, 2024</p><div class="document-actions"><a href="{{ '/files/transcripts/Keguang_Cheng_BJFU_Transcript.pdf' | relative_url }}" target="_blank" rel="noopener">View PDF <span class="sr-only">in a new tab</span></a></div></section>
+</div>

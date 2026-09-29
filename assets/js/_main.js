@@ -2,49 +2,23 @@
    Various functions that we want to use within the template
    ========================================================================== */
 
-// Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "system".
-let determineThemeSetting = () => {
-  let themeSetting = localStorage.getItem("theme");
-  return (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
+// The head initializes the saved preference before the page paints.
+// Without a saved choice, this site always starts in dark mode.
+const determineComputedTheme = () => document.documentElement.dataset.theme === "light" ? "light" : "dark";
+
+const setTheme = (theme = determineComputedTheme()) => {
+  const dark = theme !== "light";
+  document.documentElement.dataset.theme = dark ? "dark" : "light";
+  $("#theme-icon").toggleClass("fa-moon", dark).toggleClass("fa-sun", !dark);
+  const action = dark ? "Switch to light mode" : "Switch to dark mode";
+  $("#theme-toggle a").attr({"aria-label": action, title: action});
+  $('meta[name="theme-color"]').attr("content", dark ? "#000000" : "#ffffff");
 };
 
-// Determine the computed theme, which can be "dark" or "light". If the theme setting is
-// "system", the computed theme is determined based on the user's system preference.
-let determineComputedTheme = () => {
-  let themeSetting = determineThemeSetting();
-  if (themeSetting != "system") {
-    return themeSetting;
-  }
-  return (userPref && userPref("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
-};
-
-// detect OS/browser preference
-const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-
-// Set the theme on page load or when explicitly called
-let setTheme = (theme) => {
-  const use_theme =
-    theme ||
-    localStorage.getItem("theme") ||
-    $("html").attr("data-theme") ||
-    browserPref;
-
-  if (use_theme === "dark") {
-    $("html").attr("data-theme", "dark");
-    $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
-  } else if (use_theme === "light") {
-    $("html").removeAttr("data-theme");
-    $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
-  }
-};
-
-// Toggle the theme manually
-var toggleTheme = () => {
-  const current_theme = $("html").attr("data-theme");
-  const new_theme = current_theme === "dark" ? "light" : "dark";
-  localStorage.setItem("theme", new_theme);
-  setTheme(new_theme);
+const toggleTheme = () => {
+  const theme = determineComputedTheme() === "dark" ? "light" : "dark";
+  setTheme(theme);
+  try { localStorage.setItem("theme", theme); } catch (error) { /* Switching still works without storage. */ }
 };
 
 /* ==========================================================================
@@ -90,17 +64,13 @@ $(document).ready(function () {
   const scssLarge = 925;          // pixels, from /_sass/_themes.scss
   const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
 
-  // If the user hasn't chosen a theme, follow the OS preference
   setTheme();
-  window.matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
-            setTheme(e.matches ? "dark" : "light");
-          }
-        });
-
-  // Enable the theme toggle
-  $('#theme-toggle').on('click', toggleTheme);
+  $('#theme-toggle a').on('click', toggleTheme).on('keydown', function (event) {
+    if (event.key === ' ') {
+      event.preventDefault();
+      toggleTheme();
+    }
+  });
 
   // Enable the sticky footer
   var bumpIt = function () {

@@ -1,36 +1,15 @@
 ---
-layout: archive
-title: "Publications"
+layout: single
+title: "Publications & Manuscripts"
 permalink: /publications/
 author_profile: true
 ---
+<p><a href="{{ site.author.googlescholar }}">Google Scholar</a> · <a href="{{ site.author.orcid }}">ORCID</a></p>
+<h2>Published articles</h2>
+{% include publications-list.html %}
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% if site.data.manuscripts.size > 0 %}
+<h2 id="manuscripts">Manuscripts in preparation</h2>
+<p>First-author manuscripts currently in preparation.</p>
+{% include manuscripts-list.html %}
 {% endif %}
-
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-

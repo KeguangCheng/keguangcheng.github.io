@@ -1,0 +1,5 @@
+{% if include.compact %}
+<ul>{% for skill in site.data.skills %}<li><strong>{{ skill.title }}:</strong> {{ skill.description }}</li>{% endfor %}</ul>
+{% else %}
+<dl class="skills-evidence">{% for skill in site.data.skills %}<dt>{{ skill.title }}</dt><dd>{{ skill.description }}</dd>{% endfor %}</dl>
+{% endif %}

@@ -1,0 +1,206 @@
+{
+  "graduate": [
+    {
+      "slug": "programming-for-biologists",
+      "title": "Programming for Biologists",
+      "term": "Fall 2025",
+      "grade": "A",
+      "code": "BIOL-GA 1007",
+      "status": "Completed",
+      "description": "Python and Linux for biological data analysis, including file processing, reusable functions, and debugging. Sequence analysis with Biopython and BLAST; data handling and visualization with NumPy, pandas, and SciPy."
+    },
+    {
+      "slug": "statistics-in-biology",
+      "title": "Statistics in Biology",
+      "term": "Fall 2025",
+      "grade": "A",
+      "code": "BIOL-GA 2030",
+      "status": "Completed",
+      "description": "Statistical analysis in R, from experimental design and hypothesis testing to regression and ANOVA. Bootstrap and permutation methods, with attention to model assumptions, uncertainty, and interpretation of biological data."
+    },
+    {
+      "slug": "human-population-genomics",
+      "title": "Genomics of Human Populations",
+      "term": "Fall 2025",
+      "grade": "A",
+      "code": "BIOL-GA 1132",
+      "status": "Completed",
+      "description": "Genomic approaches to population history, migration, and natural selection. Analysis of linkage disequilibrium, population structure, and admixture in R, connecting patterns of genetic variation with evolutionary processes."
+    },
+    {
+      "slug": "biological-databases",
+      "title": "Biological Databases & Datamining",
+      "term": "Spring 2026",
+      "grade": "A",
+      "code": "BIOL-GA 1009",
+      "status": "Completed",
+      "description": "Relational database design and SQL queries with MySQL and SQLite. Biological data mining through clustering, classification, and regression, including applications to gene-function prediction and integration of genomic information."
+    },
+    {
+      "slug": "evolutionary-genetics",
+      "title": "Evolutionary Genetics & Genomics",
+      "term": "Spring 2026",
+      "grade": "A−",
+      "code": "BIOL-GA 1129",
+      "status": "Completed",
+      "description": "Critical reading of research on speciation, genome evolution, phylogenomics, and genotype–phenotype relationships. Evaluation of figures and analytical evidence, alongside literature synthesis and scientific writing."
+    },
+    {
+      "slug": "applied-genomics",
+      "title": "Applied Genomics",
+      "term": "Spring 2026",
+      "grade": "A−",
+      "code": "BIOL-GA 1130",
+      "project_url": "/research/#nlr-expression",
+      "project_label": "Read the course-project overview",
+      "work": [],
+      "status": "Completed",
+      "description": "Sequencing workflows on Linux and HPC, including SLURM, quality control, alignment, and quantification. An individual pine RNA-seq project on NLR expression, using Salmon/tximport, DESeq2, Mfuzz, and WGCNA, with R Markdown documentation and a Shiny dashboard."
+    },
+    {
+      "slug": "population-evolutionary-genetics",
+      "title": "Population Genetics and Evolutionary Biology for Bioinformatics",
+      "code": "BI-GY 7693",
+      "term": "Fall 2026",
+      "status": "In progress",
+      "description": "Comparative and population-genomic approaches to evolutionary questions: phylogenetic reconstruction, orthology, synteny, population structure, and adaptation. Interpretation of genomic variation in studies of traits and disease."
+    },
+    {
+      "slug": "machine-learning",
+      "title": "Machine Learning in Medicine and Biology",
+      "code": "BIOL-GA 1133",
+      "term": "Fall 2026",
+      "status": "In progress",
+      "description": "Predictive modeling for biological and medical data, including regression, classification, decision trees, random forests, support vector machines, and neural networks. Model selection, cross-validation, and assessment of generalization and limitations."
+    }
+  ],
+  "undergraduate_groups": [
+    {
+      "title": "Evolution, Ecology & Quantitative Methods",
+      "courses": [
+        {
+          "title": "Evolutionary Biology",
+          "grade": "95"
+        },
+        {
+          "title": "Ecology",
+          "grade": "93"
+        },
+        {
+          "title": "Plant Systematics",
+          "grade": "94"
+        },
+        {
+          "title": "Bioinformatics",
+          "grade": "91"
+        },
+        {
+          "title": "Experimental Design and Statistical Analysis",
+          "grade": "94"
+        },
+        {
+          "title": "Linear Algebra",
+          "grade": "96"
+        }
+      ]
+    },
+    {
+      "title": "Biological Foundations",
+      "courses": [
+        {
+          "title": "Botany",
+          "grade": "91"
+        },
+        {
+          "title": "Zoology",
+          "grade": "94"
+        },
+        {
+          "title": "Biochemistry",
+          "grade": "94"
+        },
+        {
+          "title": "Genetics",
+          "grade": "92"
+        },
+        {
+          "title": "Cell Biology",
+          "grade": "94"
+        },
+        {
+          "title": "Plant Physiology",
+          "grade": "90"
+        },
+        {
+          "title": "Animal Physiology",
+          "grade": "92"
+        },
+        {
+          "title": "Immunology",
+          "grade": "95"
+        }
+      ]
+    },
+    {
+      "title": "Laboratory & Practical Training",
+      "courses": [
+        {
+          "title": "Genetics Laboratory",
+          "grade": "98"
+        },
+        {
+          "title": "Cell Biology Laboratory",
+          "grade": "96"
+        },
+        {
+          "title": "Plant Physiology Laboratory",
+          "grade": "96"
+        },
+        {
+          "title": "Animal Physiology Laboratory",
+          "grade": "94"
+        },
+        {
+          "title": "Biochemistry Laboratory",
+          "grade": "90"
+        },
+        {
+          "title": "Microbiology Laboratory",
+          "grade": "95"
+        },
+        {
+          "title": "Molecular Biology Laboratory",
+          "grade": "88"
+        },
+        {
+          "title": "Plant Tissue Culture",
+          "grade": "95"
+        },
+        {
+          "title": "Botany Laboratory",
+          "grade": "94"
+        },
+        {
+          "title": "Zoology Laboratory",
+          "grade": "95"
+        },
+        {
+          "title": "Botany Fieldwork",
+          "grade": "96"
+        },
+        {
+          "title": "Zoology Fieldwork",
+          "grade": "94"
+        },
+        {
+          "title": "Biological Research Methods",
+          "grade": "98"
+        },
+        {
+          "title": "Laboratory Safety",
+          "grade": "93"
+        }
+      ]
+    }
+  ]
+}
