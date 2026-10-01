@@ -12,6 +12,7 @@
 | 研究兴趣的开头和点击图片提示 | `_pages/interests.html` | `<p>…</p>` 中的文字 |
 | 研究兴趣的三个方向 | `_data/interests.yml` | `title` 标题、`description` 简介、`label` 链接文字；首页三个方向也由这里同步 |
 | 兴趣图片弹窗：学名、地点、说明 | `_data/interests.yml` | `photo_label`、`photo_location`、`photo_description`；`photo_sources` 仅保留供编辑核对，网页不显示 |
+| 科研项目配图、图注与页末参考文献 | `_data/research_figures.json`；图片在 `images/research/` | `caption` 简介、`credit` 图号/作者、参考文献字段；`crop_width`/`crop_height` 控制展示区域 |
 | 科研经历，包括 NYBG | `_pages/research.md` | 各项目标题下的正文 |
 | 已发表论文 | `_data/publications.yml` | 论文题目、作者、期刊及链接；论文页和网页 CV 共用 |
 | 未发表稿件 | `_data/manuscripts.yml` | 题目、第一作者身份、进度说明；与网页 CV 共用；投稿后按实际状态更新 |

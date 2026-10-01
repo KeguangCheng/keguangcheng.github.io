@@ -190,3 +190,19 @@ html.photo-modal-open { overflow: hidden; }
 }
 
 .chuyi-gallery figcaption { margin-top: .55rem; }
+
+/* Article figures illustrate research organisms; original panels remain unaltered. */
+.research-project { display: flow-root; }
+.research-project-figure { display: block; float: right; width: 34%; max-width: 310px; margin: .3rem 0 1.2rem 1.6rem; }
+.research-project-figure--pinus { width: 45%; max-width: 430px; }
+.research-figure-window { position: relative; overflow: hidden; width: 100%; border-radius: 3px; background: #fff; }
+.research-figure-window img { position: absolute; left: 0; top: 0; display: block; max-width: none; height: auto; margin: 0; }
+.research-project-figure figcaption { margin-top: .55rem; font-size: .65rem; line-height: 1.55; text-align: left; }
+.research-figure-caption, .research-figure-credit { display: block; }
+.research-figure-credit { margin-top: .25rem; color: var(--global-text-color-light); }
+.research-image-references { font-size: .75em; line-height: 1.65; }
+.research-image-references li { padding-left: .25rem; margin-bottom: .85rem; overflow-wrap: anywhere; scroll-margin-top: 6rem; }
+@media (max-width: 700px) {
+  .research-project-figure, .research-project-figure--pinus { float: none; width: 100%; max-width: 420px; margin: 1rem auto 1.5rem; }
+  .research-project-figure--gymnosperms { max-width: 300px; }
+}

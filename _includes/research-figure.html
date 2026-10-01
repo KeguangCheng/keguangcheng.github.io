@@ -1,0 +1,10 @@
+{% assign figure = site.data.research_figures | where: "id", include.id | first %}
+<figure class="research-project-figure research-project-figure--{{ figure.id }}">
+  <div class="research-figure-window" style="aspect-ratio: {{ figure.crop_width }} / {{ figure.crop_height }};">
+    <img src="{{ figure.src | relative_url }}" alt="{{ figure.alt | escape }}" width="{{ figure.width }}" height="{{ figure.height }}" loading="lazy" decoding="async" style="width: {{ figure.width | times: 100.0 | divided_by: figure.crop_width }}%;">
+  </div>
+  <figcaption>
+    <span class="research-figure-caption">{{ figure.caption }}</span>
+    <span class="research-figure-credit">{{ figure.credit }} <a href="#ref-{{ figure.ref }}" aria-label="Image source reference {{ figure.number }}">[{{ figure.number }}]</a>{% if figure.license != "" %} · <a href="{{ figure.license_url }}">{{ figure.license }}</a>{% endif %}</span>
+  </figcaption>
+</figure>
