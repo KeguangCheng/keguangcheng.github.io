@@ -21,6 +21,7 @@ For doctoral study, I hope to connect **evolutionary and ecological questions wi
 <div class="profile-actions">
   <a class="btn btn--primary" href="{{ '/research/' | relative_url }}">Explore my research</a>
   <a class="btn btn--inverse" href="{{ '/cv/' | relative_url }}">View CV</a>
+  <a class="btn btn--inverse" href="{{ site.author.meeting }}">Schedule a meeting</a>
   <a class="contact-link" href="mailto:kc6376@nyu.edu">kc6376@nyu.edu</a>
 </div>
 
